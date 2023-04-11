@@ -1,0 +1,19 @@
+body {
+  margin: 0%;
+  background-color: rgb(137, 221, 214);
+  font-family: "comic sans ms";
+}
+.box {
+  margin-top: 10px;
+  margin-left: 200px;
+  background-color: rgba(230, 214, 214, 0.788);
+  width: 1000px;
+  height: 600px;
+  border-radius: 50px;
+  border: solid black;
+}
+.box p {
+  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}

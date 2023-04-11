@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rainwater Harvesting</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/7c6690c549.js" crossorigin="anonymous"></script>
+  </head>
+  <body onload="incrementCount(10)">
+    <header>
+      <img src="Img.png" height="130px" />
+      <nav>
+        
+        <ul>
+          <li><a href="Home Page.html">HOME <i class="fa-solid fa-house"></i></a></li>
+          <li><a href="#box">CALCULATOR <i class="fa-solid fa-calculator"></i></a></li>
+          <li><a href="Facts.html".html">FACTS<i class="fa-solid fa-question"></i> </a></li>
+
+          <li><a href="Contact us.html">CONTACT US <i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="intro">
+      <div class="box3">
+      <h2>What is Rainwater Harvesting?</h2>
+      <p>
+        Rainwater harvesting (RWH) is the collection and storage of rain, rather
+        than allowing it to run off. Rainwater is collected from a roof-like
+        surface and redirected to a tank, cistern, deep pit (well, shaft, or
+        borehole), aquifer, or a reservoir with percolation, so that it seeps
+        down and restores the ground water. Dew and fog can also be collected
+        with nets or other tools. Rainwater harvesting differs from stormwater
+        harvesting as the runoff is typically collected from roofs and other
+        surfaces for storage and subsequent reuse.</p>
+        <p>Its uses include watering gardens, livestock,irrigation, domestic use with proper treatment, and
+        domestic heating. The harvested water can also be committed to
+        longer-term storage or groundwater recharge.</p>
+      </p></div>
+      <div class="box4">
+      <img src="reuse-water.png" height="350px" width="400px">
+    </div>
+    </div>
+    <section id="benefits">
+      <h2>Benefits of Rainwater Harvesting</h2>
+      <ul>
+        <li>Conserves water</li>
+        <li>Reduces water bills</li>
+        <li>Improves soil health</li>
+        <li>Reduces flooding and erosion</li>
+      </ul>
+    </section>
+    <section id="methods">
+      <h2>Methods of Rainwater Harvesting</h2>
+      <ul>
+        <li>Roof catchment</li>
+        <li>Surface runoff collection</li>
+        <li>In-ground collection</li>
+      </ul>
+    </section>
+    <br>
+    <br>
+    <div class="box2">
+      <img src="calculator.png" height="100px" width="100px">
+      <a><img src="text.png"></a>
+    </div>
+    <br>
+    <br>
+    <center><div id="box">
+    <div class="form">
+      
+      
+  <h1>Rainwater Harvesting Calculator</h1>
+  
+  <form>
+    <label for="roofArea">Roof Area (square feet):</label>
+    <input type="number" id="roofArea" name="roofArea"><br>
+
+    <label for="rainfall">Average Annual Rainfall (inches):</label>
+    <input type="number" id="rainfall" name="rainfall"><br>
+
+    <label for="efficiency">Collection Efficiency (%):</label>
+    <input type="number" id="efficiency" name="efficiency"><br>
+
+    <button type="button" onclick="calculate()">Calculate</button>
+  </form>
+</center>
+  
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+  </div>
+  </div>
+  <br>
+  <center>
+        <div class="v">
+      <video width="420" height="340" controls>
+        <source src="rh.mp4" type="video/webm">
+      Your browser does not support the video tag.
+      </video> </center></div><br>
+  <hr>
+  <center>
+    <h1>
+      <pre>
+Have you not found the right one?
+  Find a service suitable for you here.</pre>
+    </h1>
+    <br>
+  <div class="box5">
+    <a href="Facts.html"><img src="water-saving.png"></a>
+    <a href="Methods.html"><img src="rainwater.png"></a>
+    <a href="#box"><img src="calculator1.png"></a>
+  </div>
+  <div class="box6">
+    <a href="Facts.html"><img src="question.png"></a>
+    <a href="Contact us.html"><img src="telephone.png"></a>
+    <a href="Home Page.html"><img src="house.png"></a>
+  </div>
+  <div class="main_container" id="id_main_container">
+    <div class="container_inner" id="display_div_id">
+    </div>
+  </div></center>
+  <script>
+    var counter_list = [10,10000,10000];
+    var str_counter_0 = counter_list[0];
+    var str_counter_1 = counter_list[1];
+    var str_counter_2 = counter_list[2];
+    var display_str = "";
+    var display_div = document.getElementById("display_div_id");
+  
+    function incrementCount(current_count){
+      setInterval(function(){
+        // clear count
+        while (display_div.hasChildNodes()) {
+            display_div.removeChild(display_div.lastChild);
+        }
+        str_counter_0++;
+        if (str_counter_0 > 99) {
+          str_counter_0 = 10; // reset count
+          str_counter_1++;    // increase next count
+        }
+        if(str_counter_1>99999){
+          str_counter_2++;
+        }
+        display_str = str_counter_2.toString() + str_counter_1.toString() + str_counter_0.toString();
+        for (var i = 0; i < display_str.length; i++) {
+          var new_span = document.createElement('span');
+          new_span.className = 'num_tiles';
+          new_span.innerText = display_str[i];
+          display_div.appendChild(new_span);
+        }
+      },1000);
+    }
+  </script>
+  
+    <footer>
+      <p>&copy; 2023 Rainwater Harvesting. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
